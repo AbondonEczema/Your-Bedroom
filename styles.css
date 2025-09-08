@@ -1,0 +1,114 @@
+// styles.css
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  color: #fff;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 60%;
+  height: 220px;
+  object-fit: contain;
+}
+.card h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem;
+}
+.card p {
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #f8b500;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.2s ease;
+}
+.btn:hover {
+  background: #e09e00;
+}
+.email-capture {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.email-capture h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.email-capture form {
+  margin-top: 1rem;
+}
+.email-capture input[type="email"] {
+  padding: 0.8rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+}
+.email-capture button {
+  padding: 0.8rem 1.2rem;
+  background: #f8b500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.email-capture button:hover {
+  background: #e09e00;
+}
+#responseMsg {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: green;
+}
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #777;
+}
