@@ -7,11 +7,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html"><img src="your-logo.png" alt="Cozy Bedroom Finds Logo"></a>
+    </div>
+    <nav class="menu">
+      <button class="menu-btn">☰</button>
+      <ul class="dropdown">
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Existing Hero -->
+  <section class="hero">
     <h1>✨ Cozy Bedroom Finds ✨</h1>
     <p>Amazon must-haves to make your room peaceful, cozy, and aesthetic.</p>
-  </header>
-
+  </section>
   <section class="products">
     <!-- Product 1 -->
     <div class="card">
@@ -37,7 +50,13 @@
       <a class="btn" href="https://amzn.to/4m0F8pi" target="_blank">Shop Now</a>
     </div>
   </section>
-
+<!-- Cookie notice -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>This site uses cookies to improve your experience. By continuing, you agree to our 
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <button id="acceptCookies">Got it!</button>
+  </div>
   <!-- Email Capture -->
     <section class="email-capture">
     <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
@@ -45,20 +64,21 @@
   </section>
 
 <footer>
-  <p>As an Amazon Associate, I earn from qualifying purchases. Thank you for supporting my page 💕</p>
-  <nav>
-    <a href="returns.html">Returns Policy</a> | 
-    <a href="shipping.html">Shipping Policy</a> | 
-    <a href="privacy.html">Privacy Policy</a> | 
-    <a href="terms.html">Terms of Service</a>
-  </nav>
-</footer>
+    <p>As an Amazon Associate, I earn from qualifying purchases. Thank you for supporting my page 💕</p>
+    <nav>
+      <a href="returns.html">Returns Policy</a> | 
+      <a href="shipping.html">Shipping Policy</a> | 
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </footer>
 
 
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
