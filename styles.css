@@ -45,6 +45,12 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   display: none;
   padding: 0.5rem 0;
+  min-width: 160px;
+  z-index: 999;
+}
+
+.dropdown.show {
+  display: block;
 }
 
 .dropdown li {
@@ -197,6 +203,7 @@ footer {
 head {
   text-align: center;
 }
+
 
 
 
