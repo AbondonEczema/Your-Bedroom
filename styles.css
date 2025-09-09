@@ -6,11 +6,88 @@ body {
   background-color: #fafafa;
   color: #333;
 }
-header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: linear-gradient(135deg, #fceabb, #f8b500);
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: none;
+  padding: 0.5rem 0;
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown li a:hover {
+  background: #f8b500;
   color: #fff;
+}
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cookie-banner a {
+  color: #f8b500;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  background: #f8b500;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
 header h1 {
   font-size: 2.2rem;
@@ -112,3 +189,4 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+
