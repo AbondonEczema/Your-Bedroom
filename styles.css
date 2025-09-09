@@ -60,6 +60,10 @@ body {
   background: #f8b500;
   color: #fff;
 }
+.dropdown.show {
+  display: block;
+}
+
 /* Cookie Banner */
 .cookie-banner {
   position: fixed;
@@ -189,4 +193,5 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+
 
