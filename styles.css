@@ -20,7 +20,7 @@ body {
 }
 
 .logo img {
-  height: 50px;
+  height: 100px;
 }
 
 .menu {
@@ -193,5 +193,6 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+
 
 
