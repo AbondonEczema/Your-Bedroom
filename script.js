@@ -1,4 +1,5 @@
 // script.js
+//email thing dont change
 document.getElementById("emailForm").addEventListener("submit", function(event) {
   event.preventDefault();
   const emailInput = document.getElementById("email");
@@ -13,10 +14,12 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
   }
 });
 // Toggle dropdown menu
-document.querySelector(".menu-btn").addEventListener("click", () => {
-  document.querySelector(".dropdown").classList.toggle("show");
-});
+const menuBtn = document.querySelector(".menu-btn");
+const dropdown = document.querySelector(".dropdown");
 
+menuBtn.addEventListener("click", () => {
+  dropdown.classList.toggle("show");
+});
 // Cookie Banner
 const cookieBanner = document.getElementById("cookieBanner");
 const acceptCookies = document.getElementById("acceptCookies");
@@ -25,9 +28,17 @@ if (localStorage.getItem("cookiesAccepted")) {
   cookieBanner.style.display = "none";
 }
 
+//Hide banner when button clicked
+if (acceptedCookies) {
+  acceptCookies.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieBanner.style.display = "none"; //should hide immediately
+  });
+}
 acceptCookies.addEventListener("click", () => {
   localStorage.setItem("cookiesAccepted", "true");
   cookieBanner.style.display = "none";
 });
+
 
 
