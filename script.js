@@ -12,3 +12,22 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
     responseMsg.style.color = "red";
   }
 });
+// Toggle dropdown menu
+document.querySelector(".menu-btn").addEventListener("click", () => {
+  document.querySelector(".dropdown").classList.toggle("show");
+});
+
+// Cookie Banner
+const cookieBanner = document.getElementById("cookieBanner");
+const acceptCookies = document.getElementById("acceptCookies");
+
+if (localStorage.getItem("cookiesAccepted")) {
+  cookieBanner.style.display = "none";
+}
+
+acceptCookies.addEventListener("click", () => {
+  localStorage.setItem("cookiesAccepted", "true");
+  cookieBanner.style.display = "none";
+});
+
+
