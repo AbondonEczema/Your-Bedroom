@@ -43,7 +43,7 @@ body {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  display: none;
+  display: block;
   padding: 0.5rem 0;
   min-width: 160px;
   z-index: 999;
@@ -204,6 +204,7 @@ footer {
 .titles {
   text-align: center;
 }
+
 
 
 
