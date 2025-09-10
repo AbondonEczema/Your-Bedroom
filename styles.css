@@ -101,6 +101,7 @@ body {
   cursor: pointer;
 }
 header h1 {
+  text-align: center;
   font-size: 2.2rem;
   margin: 0;
 }
@@ -203,6 +204,7 @@ footer {
 head {
   text-align: center;
 }
+
 
 
 
