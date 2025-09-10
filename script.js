@@ -17,9 +17,11 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
 const menuBtn = document.querySelector(".menu-btn");
 const dropdown = document.querySelector(".dropdown");
 
-menuBtn.addEventListener("click", () => {
-  dropdown.classList.toggle("show");
-});
+if (menuBtn && dropdown) {
+  menuBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("show");
+  });
+}
 // Cookie Banner
 const cookieBanner = document.getElementById("cookieBanner");
 const acceptCookies = document.getElementById("acceptCookies");
@@ -28,17 +30,14 @@ if (localStorage.getItem("cookiesAccepted")) {
   cookieBanner.style.display = "none";
 }
 
-//Hide banner when button clicked
-if (acceptedCookies) {
+if (acceptCookies) {
   acceptCookies.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
-    cookieBanner.style.display = "none"; //should hide immediately
+    cookieBanner.style.display = "none"; // hides immediately
   });
 }
-acceptCookies.addEventListener("click", () => {
-  localStorage.setItem("cookiesAccepted", "true");
-  cookieBanner.style.display = "none";
-});
+
+
 
 
 
