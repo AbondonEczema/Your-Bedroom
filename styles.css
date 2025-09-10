@@ -135,3 +135,48 @@ header h1 {
   text-align: center;
   margin-top: 2rem;
 }
+.email-capture {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+.email-capture h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.email-capture form {
+  margin-top: 1rem;
+}
+.email-capture input[type="email"] {
+  padding: 0.8rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+}
+.email-capture button {
+  padding: 0.8rem 1.2rem;
+  background: #f8b500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.email-capture button:hover {
+  background: #e09e00;
+}
+#responseMsg {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: green;
+}
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #777;
+}
