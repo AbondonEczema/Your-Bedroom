@@ -1,3 +1,5 @@
+console.log("✅ script.js loaded!");
+
 //email thing dont change
 document.getElementById("emailForm").addEventListener("submit", function(event) {
   event.preventDefault();
@@ -36,4 +38,5 @@ if (acceptCookies) {
     cookieBanner.style.display = "none"; // hides immediately
   });
 }
+
 
