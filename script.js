@@ -27,24 +27,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Email Form (keep your custom response handler) ---
-  const emailForm = document.getElementById("emailForm");
-  if (emailForm) {
-    emailForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-      const emailInput = document.getElementById("email");
-      const responseMsg = document.getElementById("responseMsg");
+  // --- Email Modal ---
+const modal = document.getElementById("emailModal");
+const closeModal = document.getElementById("closeModal");
 
-      if (emailInput && responseMsg) {
-        if (emailInput.value) {
-          responseMsg.textContent = "✅ Thanks! Check your inbox for the checklist.";
-          responseMsg.style.color = "green";
-          emailInput.value = "";
-        } else {
-          responseMsg.textContent = "❌ Please enter a valid email.";
-          responseMsg.style.color = "red";
-        }
-      }
-    });
+// Only show if not already closed recently
+if (!localStorage.getItem("emailModalDismissed")) {
+  setTimeout(() => {
+    if (modal) modal.style.display = "block";
+  }, 8000);
+}
+
+// Close modal on X click
+if (closeModal) {
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    localStorage.setItem("emailModalDismissed", Date.now());
+  });
+}
+
+// Close modal when clicking outside
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    localStorage.setItem("emailModalDismissed", Date.now());
   }
 });
