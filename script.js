@@ -27,14 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Email Modal ---
+// Email Modal
 const modal = document.getElementById("emailModal");
 const closeModal = document.getElementById("closeModal");
 
-// Only show if not already closed recently
+// Only show if not already dismissed
 if (!localStorage.getItem("emailModalDismissed")) {
   setTimeout(() => {
-    if (modal) modal.style.display = "block";
+    if (modal) {
+      modal.style.display = "block";
+      modal.style.zIndex = 10000; // ensure it is on top
+    }
   }, 8000);
 }
 
