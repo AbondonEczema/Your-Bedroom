@@ -164,7 +164,7 @@ header p {
 .modal {
   display: none; /* hidden by default */
   position: fixed;
-  z-index: 9999;
+  z-index: 10000;
   left: 0;
   top: 0;
   width: 100%;
@@ -209,6 +209,7 @@ footer {
 .view-more .btn {
   display: inline-block;
 }
+
 
 
 
