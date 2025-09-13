@@ -19,13 +19,9 @@ body {
   z-index: 1000;
 }
 
-.logo img {
-  height: 100px;
-}
+.logo img { height: 100px; }
 
-.menu {
-  position: relative;
-}
+.menu { position: relative; }
 
 .menu-btn {
   font-size: 1.5rem;
@@ -34,7 +30,7 @@ body {
   cursor: pointer;
 }
 
-/* Dropdown - hidden until toggled */
+/* Dropdown */
 .dropdown {
   list-style: none;
   position: absolute;
@@ -43,30 +39,16 @@ body {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  display: none; /* FIX */
+  display: none;
   padding: 0.5rem 0;
   min-width: 160px;
   z-index: 9999;
 }
+.dropdown.show { display: block; }
 
-.dropdown.show {
-  display: block;
-}
-
-.dropdown li {
-  padding: 0.5rem 1rem;
-}
-
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-}
-
-.dropdown li a:hover {
-  background: #f8b500;
-  color: #fff;
-}
+.dropdown li { padding: 0.5rem 1rem; }
+.dropdown li a { text-decoration: none; color: #333; display: block; }
+.dropdown li a:hover { background: #f8b500; color: #fff; }
 
 /* Cookie Banner */
 .cookie-banner {
@@ -83,12 +65,7 @@ body {
   align-items: center;
   gap: 1rem;
 }
-
-.cookie-banner a {
-  color: #f8b500;
-  text-decoration: underline;
-}
-
+.cookie-banner a { color: #f8b500; text-decoration: underline; }
 .cookie-banner button {
   background: #f8b500;
   color: #fff;
@@ -98,71 +75,9 @@ body {
   cursor: pointer;
 }
 
-header h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin: 0;
-}
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card img {
-  width: 60%;
-  height: 220px;
-  object-fit: contain;
-}
-.card h2 {
-  font-size: 1.4rem;
-  margin: 1rem 0 0.5rem;
-}
-.card p {
-  font-size: 1rem;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
-}
-.btn {
-  display: inline-block;
-  margin: 0 0 1.5rem;
-  padding: 0.8rem 1.5rem;
-  background: #f8b500;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: background 0.2s ease;
-}
-.btn:hover {
-  background: #e09e00;
-}
-/* Section titles centered */
-.titles {
-  text-align: center;
-  margin-top: 2rem;
-}
-/* Modal background */
+/* Modal */
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   z-index: 10000;
   left: 0;
@@ -172,45 +87,4 @@ header p {
   overflow: auto;
   background-color: rgba(0,0,0,0.6);
 }
-
-/* Modal content box */
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-}
-
-/* Close button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #fff;
-  font-size: 0.9rem;
-  color: #777;
-}
-.view-more {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-.view-more .btn {
-  display: inline-block;
-}
-
-
-
-
-
+.modal-content
