@@ -1,13 +1,13 @@
-// Wait until the DOM is fully loaded
+
+// Wait until DOM loads
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Dropdown Menu ---
+  const menuBtn = document.querySelector(".menu-btn");
+  const dropdown = document.querySelector(".dropdown");
 
-  // --- Mobile Menu Toggle ---
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
+  if (menuBtn && dropdown) {
+    menuBtn.addEventListener("click", () => {
+      dropdown.classList.toggle("show");
     });
   }
 
@@ -30,14 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("emailModal");
   const closeModal = document.getElementById("closeModal");
 
-  // Show modal if not dismissed
-  if (modal && !localStorage.getItem("emailModalDismissed")) {
+  if (!localStorage.getItem("emailModalDismissed")) {
     setTimeout(() => {
-      modal.style.display = "block";
+      if (modal) {
+        modal.style.display = "block";
+        modal.style.zIndex = 10000; // ensure on top
+      }
     }, 8000);
   }
 
-  // Close modal on X click
   if (closeModal) {
     closeModal.addEventListener("click", () => {
       modal.style.display = "none";
@@ -45,12 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Close modal when clicking outside
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.style.display = "none";
       localStorage.setItem("emailModalDismissed", Date.now());
     }
   });
-
 });
