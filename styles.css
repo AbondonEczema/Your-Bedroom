@@ -1,6 +1,6 @@
 
 body{font-family:Arial,sans-serif;margin:0;padding:0;background:#fafafa;color:#333}
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:linear-gradient(135deg,#fceabb,#f8b500);color:#fff;position:sticky;top:0;z-index:1000}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:linear-gradient(135deg,#fff,#f8b500);color:#fff;position:sticky;top:0;z-index:1000}
 .logo img{height:100px}
 .menu{position:relative}
 .menu-btn{font-size:1.5rem;background:none;border:none;cursor:pointer}
@@ -32,7 +32,7 @@ footer{text-align:center;padding:2rem 1rem;background:#fff;font-size:.9rem;color
 .blog-hero {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #fceabb, #f8b500);
+  background: linear-gradient(135deg, #fff, #f8b500);
   color: #fff;
 }
 .blog-hero h1 {
@@ -87,5 +87,6 @@ footer{text-align:center;padding:2rem 1rem;background:#fff;font-size:.9rem;color
   font-weight: bold;
   color: #f8b500;
 }
+
 
 
