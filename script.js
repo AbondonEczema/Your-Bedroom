@@ -1,15 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.querySelector(".menu-btn");
-  const dropdown = document.querySelector(".dropdown");
-  menuBtn.addEventListener("click", () => { dropdown.classList.toggle("show"); });
-
-  const cookieBanner = document.getElementById("cookieBanner");
-  const acceptCookies = document.getElementById("acceptCookies");
-  if (localStorage.getItem("cookiesAccepted")) cookieBanner.style.display = "none";
-  acceptCookies.addEventListener("click", () => { localStorage.setItem("cookiesAccepted","true"); cookieBanner.style.display="none"; });
-
-  const modal = document.getElementById("emailModal");
-  const closeModal = document.getElementById("closeModal");// Wait until the DOM is fully loaded
+// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
 
   // --- Mobile Menu Toggle ---
@@ -26,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const cookieBanner = document.getElementById("cookieBanner");
   const acceptCookies = document.getElementById("acceptCookies");
 
-  if (localStorage.getItem("cookiesAccepted") && cookieBanner) {
-    cookieBanner.style.display = "none";
+  if (localStorage.getItem("cookiesAccepted")) {
+    if (cookieBanner) cookieBanner.style.display = "none";
   }
 
-  if (acceptCookies && cookieBanner) {
+  if (acceptCookies) {
     acceptCookies.addEventListener("click", () => {
       localStorage.setItem("cookiesAccepted", "true");
-      cookieBanner.style.display = "none";
+      if (cookieBanner) cookieBanner.style.display = "none";
     });
   }
 
@@ -41,13 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("emailModal");
   const closeModal = document.getElementById("closeModal");
 
+  // Show modal if not dismissed
   if (modal && !localStorage.getItem("emailModalDismissed")) {
     setTimeout(() => {
       modal.style.display = "block";
     }, 8000);
   }
 
-  if (closeModal && modal) {
+  // Close modal on X click
+  if (closeModal) {
     closeModal.addEventListener("click", () => {
       modal.style.display = "none";
       localStorage.setItem("emailModalDismissed", Date.now());
@@ -63,9 +54,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
-  if (!localStorage.getItem("emailModalDismissed")) setTimeout(()=>{ modal.style.display="block"; },8000);
-  closeModal.addEventListener("click",()=>{ modal.style.display="none"; localStorage.setItem("emailModalDismissed",Date.now()); });
-  window.addEventListener("click",(e)=>{ if(e.target===modal){ modal.style.display="none"; localStorage.setItem("emailModalDismissed",Date.now()); } });
-});
-
